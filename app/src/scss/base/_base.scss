@@ -1,0 +1,18 @@
+@use '../utilities/' as *;
+
+/* Page Styles */
+
+body {
+    background-color: var(--clr-primary-100);
+    background-image: url('../img/bg-mobile.svg');
+    background-size: cover;
+    color: hsl(0, 0%, 100%);
+
+    @include respond-above(lg) {
+        background-image: url('../img/bg-desktop.svg');
+    }
+}
+
+a {
+    text-decoration: none;
+}

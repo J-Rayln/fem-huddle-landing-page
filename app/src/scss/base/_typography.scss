@@ -1,0 +1,14 @@
+@use '../utilities/' as *;
+
+/* Typography */
+
+body {
+    font-family: var(--ff-body);
+    font-size: var(--fs-body);
+}
+
+h1 {
+    font-family: var(--ff-headings);
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-semi-bold);
+}

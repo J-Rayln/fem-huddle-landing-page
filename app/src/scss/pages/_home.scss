@@ -1,0 +1,74 @@
+@use '../utilities/' as *;
+
+.header {
+    margin-bottom: rem(70);
+
+    @include respond-above(lg) {
+        margin-bottom: rem(100);
+    }
+}
+
+.logo {
+    max-width: rem(126);
+
+    @include respond-above(lg) {
+        max-width: rem(200);
+    }
+}
+
+.hero {
+    display: grid;
+    gap: rem(70);
+    text-align: center;
+    margin-bottom: rem(65);
+
+    h1, p {
+        margin-bottom: rem(30);
+    }
+
+    @include respond-above(lg) {
+        grid-template-columns: fit-content(rem(695)) 1fr;
+        gap: rem(55);
+        margin-bottom: rem(30);
+        
+        &__text {
+            text-align: start;
+            padding-top: rem(55);
+
+            h1 {
+                max-width: 20ch;
+                margin-bottom: rem(40);
+            }
+
+            p {
+                line-height: 1.8;
+                margin-bottom: rem(20);
+            }
+        }
+    }
+}
+
+.footer {
+    text-align: center;
+
+    a:not(:last-child) {
+        padding-right: 1rem;
+    }
+    
+    [class*="fa-"] {
+        color: hsl(0, 0%, 100%);
+        height: rem(30);
+
+        &:hover {
+            color: var(--clr-primary-200);
+        }
+    }
+
+    @include respond-above(lg) {
+        text-align: end;
+
+        [class*="fa-"] {
+            height: rem(40);
+        }
+    }
+}
